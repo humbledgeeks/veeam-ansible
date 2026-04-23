@@ -1,0 +1,19 @@
+---
+# ansible-lint configuration for infra-automation
+# Profile: basic — enforces yaml, schema, and name rules without requiring full FQCN rewrites
+profile: basic
+
+warn_list:
+  - yaml[truthy]             # Some truthy-like values are literal module strings (e.g. service_policy: on)
+  - name[casing]             # vCenter/vSAN brand names intentionally start lowercase
+  - deprecated-local-action  # DC deploy playbook uses local_action; refactor tracked separately
+
+skip_list:
+  - risky-shell-without-stdin  # ESXi management requires shell module for esxcli/wget commands
+
+exclude_paths:
+  - NetApp/ONTAP/Ansible/ONTAP-Learning/  # Tutorial examples from training — not production playbooks
+  - "**/.github/**"
+  - "**/vars.yml"
+  - "**/vars.*.yml"
+  - Linux/Ubuntu/Shell/
