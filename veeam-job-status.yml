@@ -8,7 +8,7 @@
 # Date    : 2026-03-16
 # Version : 1.0
 # API     : Veeam VBR REST API v1 (uri module)
-# Repo    : infra-automation/Veeam/Ansible
+# Repo    : veeam-ansible
 # Usage   : ansible-playbook veeam-job-status.yml --ask-vault-pass
 # Notes   : Requires Veeam B&R v11+ with REST API enabled (default port 9419)
 # =============================================================================

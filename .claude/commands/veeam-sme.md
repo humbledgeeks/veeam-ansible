@@ -49,7 +49,7 @@ All Veeam scripts go in:
     Date    : <today's date>
     Version : 1.0
     Module  : Veeam PowerShell Toolkit (VBR 12)
-    Repo    : infra-automation/Veeam
+    Repo    : veeam-ansible
 #>
 ```
 - VBR 12+: module loads automatically on the VBR server
